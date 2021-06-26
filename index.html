@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Weather Widget</title>
+</head>
+<body>
+    <div class="overall-outer-container">
+        <div class="overall-inner-container">
+            <div class="upper-container">
+                <div class="top-bar">
+                    <form>
+                        <input type="text" name="countrySearch" id="country-search" placeholder="Enter the location">
+                        <button id="button"><i class="bi bi-search"></i></button>
+                    </form>
+                </div>
+
+                <!-- main container-------------- -->
+                <div class="main-container container-fluid">
+                    <div class="row weather-main">
+                        <div class="col-7">
+                            <div class="main-weather-info">
+                                <div class="location-date">
+                                    <p id="time-now"></p>
+                                    <p id="location">Berlin, Germany</p>
+                                    <p class="day-date"></p>
+                                </div>
+                                <div class="row">
+                                    <div class="temperature-icon col-1">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="temperature-details col-11">
+                                        <h2></h2>
+                                        <p class="grad-fah"></p>
+                                        <div class="weather-small-details">
+                                            <img src="" alt="" class="today-condition-icon">
+                                            <p id="today-condition"></p>
+                                            <p>/feels like <span id="feels-like"></span></p>
+                                        </div>
+                                        <div class="sunrise-sunset">
+                                            <div class="sunrise">
+                                                <img src="icons/sunrise.png" alt="sunrise">
+                                                <p></p>
+                                            </div>
+                                            <div class="sunset">
+                                                <img src="icons/sea.png" alt="sunset">
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="more-widget"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- lower container-------------- -->
+            <div class="lower-container">
+                <div class="days-menu">
+                    <div class="today active"><p>Next 48 hours</p></div>
+                    <div class="seven-days"><p>Next 8 days</p></div>
+                </div>
+                <div class="weather-condition-outer">
+                    <div class="daily-weather-condition"></div>
+                    <div class="hourly-weather-condition" id="current-view"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="javascript/selector.js"></script>
+<script src="javascript/script.js"></script>
+<script src="javascript/generateContent.js"></script>
+</body>
+</html>

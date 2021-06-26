@@ -1,0 +1,286 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, #button, #country-search {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-shadow: none;
+}
+
+/*Beginning of Stylesheet------------------------------------------------------*/
+html{
+    font-size: 12px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+}
+body{
+    color: #fff;
+}
+.overall-outer-container{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease-in;
+}
+.overall-inner-container{
+    width: 90%;
+    margin: 0 0.1rem 0 auto;
+    z-index: 2;
+}
+/*Top bar------------------------------------------------------*/
+.top-bar{
+    height: 15vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 5rem;
+}
+#country-search, #button{
+    height: 3rem;
+}
+#country-search{
+    width: 30rem;
+    border-radius: 2rem;
+    background: none;
+    border: 1px solid #fff;
+    padding: 10px;
+    padding-right: 40px;
+    transition: all 0.2s ease-in-out;
+}
+#country-search:focus{
+    background-color: #fff;
+}
+#button{
+    background: none;
+    margin-left: -3rem;
+    color: #000;
+    font-size: 1.4rem;
+}
+
+/*Main container------------------------------------------------------*/
+.main-container{
+    height: 55vh;
+}
+.weather-main{
+    padding-top: 3rem;
+}
+.main-weather-info{
+    display: flex;
+    flex-direction: column;
+}
+#time-now{
+    font-size: 3rem;
+    font-weight: 200;
+}
+.location-date{
+    text-transform: uppercase;
+    width: 100%;
+}
+.day-date{
+    font-size: 1.3rem;
+}
+.temperature-icon{
+    margin-top: 1.3rem;
+}
+.temperature-icon img{
+    height: 6rem;
+    width: 6rem;
+    margin-right: 1rem;
+}
+h2{
+    font-size: 5rem;
+    font-weight: 300;
+}
+.temperature-details{
+    width: 70%;
+    margin: 0.7rem 0 0 2rem;
+}
+.temperature-details p{
+    margin-bottom: 6px;
+}
+.grad-fah{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.weather-small-details{
+    display: flex;
+}
+.today-condition-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 6px;
+}
+.sunrise-sunset{
+    display: flex;
+}
+.sunrise, .sunset{
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+}
+.sunrise-sunset img{
+    height: 2rem;
+    width: 2rem;
+    margin-right: 5px;
+}
+.sunrise-sunset p{
+    margin: 0;
+}
+.low{
+    color: #D30000;
+    font-size: 1.2rem;
+}
+.high{
+    color: #79FFCB;
+    font-size: 1.2rem;
+}
+.more-widget{
+    height: inherit;
+    width: inherit;
+}
+.more-widget-inner{
+    height: inherit;
+    width: inherit;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.6rem;
+}
+.square{
+    height: 12rem;
+    width: 13rem;
+    border-radius: 1rem;
+    padding-top: 1.3rem;
+    padding-left: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+/* .square-0{
+    background-color: rgba(163, 124, 235, 0.3);
+}
+.square-1{
+    background-color: rgba(130, 199, 250, 0.3);
+}
+.square-2{
+    background-color: rgba(109, 242, 138, 0.3);
+}
+.square-3{
+    background-color: rgba(245, 221, 102, 0.3);
+} */
+.square p:first-child{
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.square p:nth-child(2){
+    font-size: 2rem;
+    margin-top: 0.4rem;
+}
+.widget-icon{
+    height: 3rem;
+    width: 3rem;
+}
+/*Lower container------------------------------------------------------*/
+.lower-container{
+    height: 30vh;
+}
+.days-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+.today:hover, .seven-days:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 5px 5px 0 0;
+}
+.today, .seven-days{
+    cursor: pointer;
+    width: 50%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+.weather-condition-outer{
+    width: 100%;
+    position: relative;
+    border-top: 2px solid royalblue;
+}
+#current-view{
+    opacity: 1;
+}
+.hourly-weather-condition, .daily-weather-condition{
+    position: absolute;
+    left: 0;
+    top:0;
+    opacity: 0;
+    width: 100%;
+}
+.hourly-outer, .daily-outer{
+    display: flex;
+    flex-shrink: 0;
+    overflow-x: hidden;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+.active{
+    background-color: royalblue;
+    border-radius: 5px 5px 0 0;
+}
+.show{
+    opacity: 1;
+}
+.daily-outer .day{
+    width: 18rem;
+}
+.hour, .day{
+    margin: 1rem 0.6rem 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 1rem;
+    width: 13rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease-in-out;
+}
+.hour:hover, .day:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.time-day{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.weather-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 1.2rem;
+}
+.weather-icon img{
+    width: 100%;
+    height: 100%;
+}
+.temperature{
+    margin-top: 0.4rem;
+    font-size: 1.4rem;
+}
+.day-condition{
+    font-size: 0.7rem;
+    text-align: center;
+}
