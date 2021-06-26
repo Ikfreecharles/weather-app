@@ -44,9 +44,17 @@ body{
 .top-bar{
     height: 15vh;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-end;
     padding-right: 5rem;
+}
+.top-bar form{
+    display: flex;
+    align-items: center;
+}
+.top-bar label{
+    font-size: 1.4rem;
+    margin: 0 0.5rem;
 }
 #country-search, #button{
     height: 3rem;
