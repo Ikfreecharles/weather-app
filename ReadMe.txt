@@ -1,3 +1,6 @@
+website link:
+https://theweatherly-app.netlify.app
+
 Features of the weather app:
     - a search bar to pick/change a location
 
